@@ -97,7 +97,7 @@ jQuery(document).ready(function($) {
             sectionSelector: '.fp-section',
             verticalCentered: false,
             lockAnchors: false,
-            anchors:['main-screen', 'industries', 'job-offers', 'blog'],
+            anchors:['main-screen', 'industries', 'job-offers', 'blog', 'navigation'],
         })
     }
 
