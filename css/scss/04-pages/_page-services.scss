@@ -1,0 +1,37 @@
+.sidebar-list__item {
+    width: 100%;
+    @include flex($alignI: stretch);
+    &__left {
+        width: 350px;
+        background-color: #FFF;
+        padding: 20px;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &__right {
+        padding: 20px 20% 20px  85px;
+        background-color: #f3f3f3;
+        width: -webkit-calc(100% - 350px);
+        width: calc(100% - 350px);
+        min-height: 182px;
+        strong {
+            display: block;
+            margin-bottom: 22px;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        p {
+            font-weight: 100;
+        }
+    }
+    &:first-of-type {
+        .sidebar-list__item__right,
+        .sidebar-list__item__left {
+            padding-top: 65px;
+            padding-bottom: 80px;
+        }
+    }
+}
