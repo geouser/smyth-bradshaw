@@ -1,0 +1,306 @@
+.employe-popup {
+    width: 1020px;
+    display: block;
+    margin: 0 auto;
+    background-color: $black;
+
+    .popup-header {
+        height: 50px;
+        background-color: #fff;
+    }
+
+    .popup-body {
+        padding: 50px 80px;
+    }
+
+    .tab {
+        position: relative;
+        display: none;
+
+        &.state-active {
+            display: block;
+        }
+    }
+
+    .mfp-close {
+        width: 50px;
+        height: 50px;
+        line-height: 44px;
+        font-size: 46px;
+        color: $black;
+    }
+
+    .status {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        z-index: 2;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        @include flex($alignI: center);
+        text-align: center;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        p {
+            font-weight: normal;
+            text-transform: uppercase;
+            font-size: 24px;
+            text-align: center;
+            color: #fff;
+            width: 100%;
+        }
+    }
+
+    .tabs-controls {
+        .tab-button {
+            float: left;
+            padding: 0 50px;
+            height: 50px;
+            color: $black;
+            background-color: #fff;
+            border: 0;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                height: 22px;
+                margin-right: 15px;
+            }
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                text-transform: uppercase;
+                font-size: 16px;
+                font-weight: bold;
+                
+            }
+
+            img.light {
+                display: none;
+            }
+
+            img.dark {
+                display: inline-block;
+            }
+
+            &:hover,
+            &.state-active {
+                background-color: $black;
+                color: #fff;
+                .dark {
+                    display: none;
+                }
+                .light {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+
+
+.employe-form {
+    .form-group {
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    input[type=text],
+    input[type=tel],
+    input[type=email],
+    textarea {
+        background-color: #242424;
+        color: #8b8b8b;
+        font-size: 18px;
+        padding: 0 15px;
+        border: 0;
+        display: block;
+        width: 100%;
+        height: 40px;
+        font-weight: normal;
+    }
+
+    textarea {
+        height: 220px;
+        resize: none;
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+
+    .button {
+        width: 100%;
+        height: 40px;
+        display: block;
+        line-height: 40px;
+        text-align: center;
+        background-color: $black;
+        color: #fff;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        font-weight: normal;
+        font-size: 18px;
+
+        &:hover {
+            background-color: #fff;
+            color: $black;
+        }
+    }
+
+    .custom-file {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        overflow: hidden;
+
+        .file-name {
+            width: 100%;
+            height: 100%;
+            background-color: #242424;
+            padding: 0 75px 0 15px;
+            color: $white;
+            font-size: 18px;
+            font-weight: normal;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            line-height: 40px;
+        }
+
+        input[type=file] {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 100%;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        .file-button {
+            width: 60px;
+            height: 100%;
+            background-color: transparent;
+            text-align: center;
+            color: #fff;
+            border: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 28px;
+            z-index: 1;
+            line-height: 40px;
+        }
+
+        input[type=file]:hover ~ .file-button {
+            color: $black;
+            background-color: #fff;
+        }
+    }
+
+    .submit {
+        width: 255px;
+        height: 45px;
+        border-radius: 4px;
+        background-color: #fff;
+        color: $black;
+        font-weight: normal;
+        font-size: 20px;
+        text-transform: uppercase;
+        display: block;
+        margin: 50px auto 0;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+
+        &:disabled {
+            opacity: 0.5;
+        }
+    }
+
+    .radio-wrap {
+        height: 40px;
+        position: relative;
+
+        span {
+            width: 100%;
+            height: 100%;
+            background-color: #242424;
+            padding: 0 135px 0 15px;
+            color: $white;
+            font-size: 18px;
+            font-weight: normal;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            line-height: 40px;
+        }
+
+        .radio-group {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 120px;
+
+            input {
+                display: none;
+
+                &:checked + label {
+                    background-color: #fff;
+                    color: $black;
+                }
+            }
+
+            label {
+                float: left;
+                height: 100%;
+                width: 50%;
+                text-align: center;
+                font-size: 18px;
+                line-height: 40px;
+                text-transform: uppercase;
+                font-weight: normal;
+                -webkit-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                color: #fff;
+
+                &:hover {
+                    background-color: #fff;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+::-webkit-file-upload-button { cursor:pointer; }

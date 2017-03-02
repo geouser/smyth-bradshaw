@@ -73,11 +73,11 @@
                     <h1><strong>Smyth & Bradshaw</strong> – We <br>will help your business <br>grow!</h1>
 
                     <div class="user-area">
-                        <button class="user-area-control">
+                        <button class="user-area-control magnific" href="#employe-popup" data-tab="#tab-1">
                             <img src="images/candidate.svg" alt="">
                             <span>Candidate Platform</span>
                         </button>
-                        <button class="user-area-control">
+                        <button class="user-area-control magnific" href="#employe-popup" data-tab="#tab-2">
                             <img src="images/client.svg" alt="">
                             <span>Client Area</span>
                         </button>
@@ -443,7 +443,116 @@
 
   	    <!-- //////////////////////////////////////////////////////////////////////// -->
 
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup"></div>
+        <div id="employe-popup" class="mfp-hide zoom-anim-dialog employe-popup">
+
+            <div class="popup-header">
+                <div class="tabs-controls">
+                    <button class="tab-button state-active" href="#tab-1">
+                        <img src="images/candidate.svg" alt="" class="light">
+                        <img src="images/candidate-dark.svg" alt="" class="dark">
+                        <span>Candidate</span>
+                    </button>
+                    <button class="tab-button" href="#tab-2">
+                        <img src="images/client.svg" alt="" class="light">
+                        <img src="images/client-dark.svg" alt="" class="dark">
+                        <span>Client</span>
+                    </button>
+                </div>
+            </div> <!-- end popup-header -->
+
+            <div class="popup-body">
+
+                <div class="tab state-active" id="tab-1">
+                    <form class="employe-form" action="">
+                        <div class="flex-row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Full Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="email" placeholder="Your Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="phone" placeholder="Contact Number">
+                                </div>
+                                <div class="form-group">
+                                    <div class="flex-row">
+                                        <div class="col-6">
+                                            <input type="file" name="cv">
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="#" class="button">Live Vacancies</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <textarea name="message" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="form_id" value="candidate">
+                        <button class="submit">Send info</button>
+                    </form>
+
+                    <div class="status status-seccess">
+                        <p>Thank you for your inquiry</p>
+                    </div>
+                    <div class="status status-error">
+                        <p>Error</p>
+                    </div>
+                </div> <!-- end tab -->
+
+                <div class="tab" id="tab-2">
+                    <form class="employe-form" action="">
+                        <div class="flex-row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Full Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="email" placeholder="Your Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="phone" placeholder="Contact Number">
+                                </div>
+                                <div class="form-group">
+                                    <div class="radio-wrap">
+                                        <span class="label">REQUEST A CALL</span>
+
+                                        <div class="radio-group">
+                                            <input type="radio" name="call" value="yes" id="radio-yes" checked="">
+                                            <label for="radio-yes">Yes</label>
+                                            <input type="radio" name="call" value="no" id="radio-no">
+                                            <label for="radio-no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <textarea name="message" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="form_id" value="client">
+                        <button class="submit">Send info</button>
+                    </form>
+
+                    <div class="status status-seccess">
+                        <p>Thank you for your inquiry, we will be in contact with you shortly</p>
+                    </div>
+                    <div class="status status-error">
+                        <p>Error</p>
+                    </div>
+                </div> <!-- end tab -->
+
+            </div> <!-- end popup-body -->
+
+        </div> <!-- end employe popup -->
+
+
 
         <div id="modal-popup-ok" class="mfp-hide zoom-anim-dialog popup result">
             <p class="heading">Ваша заявка принята =)</p>

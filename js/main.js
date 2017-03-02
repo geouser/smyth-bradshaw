@@ -111,6 +111,50 @@ jQuery(document).ready(function($) {
     }
 
 
+    /*---------------------------
+                                  Custom input
+    ---------------------------*/
+    $('input[type=file]').each(function(index, el) {
+        $(this).wrap('<div class="custom-file"></div>');
+        var wrapper = $(this).parent('.custom-file');
+        wrapper.append('<span class="file-name">Attach CV<span>');
+        var file_name = $(this).siblings('.file-name');
+        wrapper.append('<span class="file-button">+</span>');
+        var file_button = $(this).siblings('.file-button');
+
+        $(this).on('change', function(event) {
+            event.preventDefault();
+            var filename = $(this).val().split('/').pop().split('\\').pop();
+            if ( filename == '' ) {
+                filename = 'Attach CV';
+            }
+            file_name.text(filename);
+        });
+    });
+
+
+    /*---------------------------
+                                  Custom popup tabs
+    ---------------------------*/
+    $('.tab-button').on('click', function(event) {
+        event.preventDefault();
+        $(this).addClass('state-active').siblings().removeClass('state-active');
+        var tab = $(this).attr('href');
+        if ( exist(tab) ) {
+            $(tab).addClass('state-active').siblings('.tab').removeClass('state-active');
+        }
+    });
+
+    /* activate tab in popup based on button attribute */
+    $('.user-area-control').on('click', function(event) {
+        event.preventDefault();
+        var tab = $(this).attr('data-tab');
+        $('button[href='+tab+']').click();
+    });
+
+
+
+
 
     /*---------------------------
                                   Magnific popup
