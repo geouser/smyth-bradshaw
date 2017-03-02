@@ -461,6 +461,17 @@
 }
 
 
+.navigation {
+    @include flex($alignI: center);
+    padding-bottom: 0;
+
+    .site-footer {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+
 
 /* fullpage footer */
 .fullpage-footer {
@@ -474,6 +485,11 @@
     color: $white;
     font-size: 20px;
     font-weight: normal;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 1;
+    visibility: visible;
 
     @media (min-width: 1601px) {
         border-style: solid;
@@ -601,4 +617,14 @@
             }
         }
     }
+}
+
+
+.fp-viewing-navigation .fullpage-footer {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
 }

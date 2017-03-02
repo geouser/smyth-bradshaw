@@ -87,6 +87,14 @@ jQuery(document).ready(function($) {
         $('.site-menu').removeClass('active');
     });
 
+    $( '.site-menu' ).on( 'mousewheel DOMMouseScroll', function ( e ) {
+        var e0 = e.originalEvent,
+            delta = e0.wheelDelta || -e0.detail;
+
+        this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+        e.preventDefault();
+    });
+
 
 
     /*---------------------------
@@ -98,6 +106,7 @@ jQuery(document).ready(function($) {
             verticalCentered: false,
             lockAnchors: false,
             anchors:['main-screen', 'industries', 'job-offers', 'blog', 'navigation'],
+            normalScrollElements: '.site-menu'
         })
     }
 
