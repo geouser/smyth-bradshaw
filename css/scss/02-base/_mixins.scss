@@ -1,0 +1,262 @@
+%clearfix {
+  *zoom: 1;
+  &:after {
+    content: '';
+    display: table;
+    line-height: 0;
+    clear: both;
+  }
+}
+
+
+%vertAlign {
+  *zoom: 1;
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; width: 0;
+    margin-right: 0; 
+  }
+}
+
+@mixin position($pos, $top, $right, $bottom, $left){
+  position: $pos;
+  left: $left;
+  right: $right;
+  top: $top;
+  bottom: $bottom;
+}
+
+@mixin flex($alignI: center, $justify: space-between, $direction: row, $wrap: wrap  ) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-align-items: $alignI;
+    -ms-align-items: $alignI;
+    align-items: $alignI;
+
+    @if $justify == flex-start {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+    } @else if $justify == flex-end {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+    } @else if $justify == space-between {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+    } @else if $justify == space-around {
+      -ms-flex-pack: distribute;    
+    } @else {
+      -webkit-box-pack: $justify;
+      -ms-flex-pack: $justify;
+    }
+    -webkit-justify-content: $justify;
+    -moz-justify-content: $justify;
+    justify-content: $justify;
+
+    -webkit-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction; 
+
+    -webkit-flex-wrap: $wrap;
+    -ms-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+}
+
+@mixin flexDirection($direction) {
+  -webkit-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+        flex-direction: $direction; 
+}
+
+
+@mixin animation($name, $duration: 1000ms, $iterations: infinite, $timing-function: ease, $delay: 0ms) {
+  // There is a FF bug that requires all time values to have units, even 0 !!!!!!
+  -webkit-animation: $name $duration $iterations $timing-function $delay;
+  -ms-animation: $name $duration $iterations $timing-function $delay;
+  animation: $name $duration $iterations $timing-function $delay;
+}
+
+
+@mixin transition($style, $duration){
+  -webkit-transition: $style $duration;
+   -ms-transition: $style $duration;
+   transition: $style $duration;
+}
+
+
+@mixin transform($transforms){
+  -webkit-transform: $transforms;
+   -ms-transform: $transforms;
+   transform: $transforms;
+}
+
+@mixin textEnd($overflow: ellipsis){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+
+@mixin tooltip($content: attr(data-tooltip), $direction: top) {
+  position: relative;
+  &:before, &:after {
+    display: none;
+    z-index: 98;
+  }
+  &:hover {
+    &:after { // for text bubble
+      content: $content;
+      display: block;
+      position: absolute;
+      height: 12px; // (makes total height including padding 22px)
+      line-height: 12px; 
+      padding: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      color: #fff;
+      background-color: #222;
+    }
+    @if ($direction == 'top'){
+      &:before {
+        @include triangle(down, 6px, #222);
+        top: -6px; margin-top: 0;
+        left: 47%;
+      }
+      &:after {
+        top: -28px;
+        left: 47%; margin-left: -20px;
+      }
+    }
+    @else if ($direction == 'bottom'){
+      &:before {
+        @include triangle(up, 6px, #222);
+        top: auto; margin-top: 0;
+        bottom: -6px;
+        left: 47%;
+      }
+      &:after {
+        bottom: -28px;
+        left: 47%; margin-left: -20px;
+      }
+    }
+  }
+}
+
+@mixin triangle($direction, $size: 6px, $color: #222){
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0; width: 0;
+  @if ($direction == 'up'){
+    border-bottom: $size solid $color;
+    border-left: 1/2*$size solid transparent;
+    border-right: 1/2*$size solid transparent;
+    bottom: 100%;
+  }
+  @else if ($direction == 'down'){
+    border-top: $size solid $color;
+    border-left: 1/2*$size solid transparent;
+    border-right: 1/2*$size solid transparent;
+    top: 100%;
+  }
+  @else if ($direction == 'left'){
+    border-top: 1/2*$size solid transparent;
+    border-bottom: 1/2*$size solid transparent;
+    border-right: $size solid $color;
+    right: 100%;
+  }
+  @else if ($direction == 'right'){
+    border-top: 1/2*$size solid transparent;
+    border-bottom: 1/2*$size solid transparent;
+    border-left: $size solid $color;
+    left: 100%;
+  }
+}
+
+
+@mixin m320 {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin m360 {
+  @media (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin m600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+
+@mixin m800 {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin m1000 {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin m1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin m1600 {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin m1900min {
+  @media (min-width: 1900px) {
+    @content;
+  }
+}
+@mixin mh900 {
+  @media (max-height: 900px) {
+    @content;
+  }
+}
+@mixin mh850 {
+  @media (max-height: 850px) {
+    @content;
+  }
+}
+
+@mixin mh800 {
+  @media (max-height: 800px) {
+    @content;
+  }
+}
+
+@mixin mh750 {
+  @media (max-height: 750px) {
+    @content;
+  }
+}
+
+@mixin mh700 {
+  @media (max-height: 700px) {
+    @content;
+  }
+}
+
+@mixin mh660 {
+  @media (max-height: 660px) {
+    @content;
+  }
+}

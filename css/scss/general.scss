@@ -1,0 +1,21 @@
+/* Tools styles */
+@import '01-tools/normalize';
+@import '01-tools/fonts';
+@import '01-tools/slick';
+@import '01-tools/slick-theme';
+@import '01-tools/magnific-popup';
+
+
+/*Base styles*/
+@import '02-base/mixins';
+@import '02-base/vars';
+@import '02-base/settings';
+
+
+/*Modules styles*/
+@import '03-modules/header';
+@import '03-modules/popup';
+
+
+/*Pages styles*/
+@import '04-pages/page-main';
