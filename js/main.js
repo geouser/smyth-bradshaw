@@ -124,7 +124,11 @@ jQuery(document).ready(function($) {
     });
 
 
-
+    $('.team--slider').slick({
+        slidesToShow: 2,
+        arrows: true,
+        dots: false
+    });
     /*----------------------------
                               SEND FORM
     -------------------------*/

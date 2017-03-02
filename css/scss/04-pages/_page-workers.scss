@@ -4,6 +4,8 @@
 
 .worker {
     width: 50%;
+    color: $black;
+    @include transition(all, .4s);
     &__img {
         background-repeat: no-repeat;
         background-position: 50% 50%;
@@ -24,27 +26,28 @@
             z-index: 2;
             opacity: 0;
             background-color: rgba(0,0,0,.5);
-            @include transition(all, .2s);
+            @include transition(all, .4s);
         }
     }
     &__info {
         background-color: #FFF;
         padding: 25px 25px 25px 80px;
-        @include transition(all, .2s);
+        @include transition(all, .4s);
         strong {
             display: block;
             font-size: 30px;
             font-weight: 400;
-            @include transition(all, .2s);
+            @include transition(all, .4s);
         }
         span {
             display: block;
             font-size: 30px;
             font-weight: 100;
-            @include transition(all, .2s);
+            @include transition(all, .4s);
         }
     }
     &:hover {
+        color: #fff;
         .worker__img:before {
             opacity: 1;
         }
@@ -54,6 +57,112 @@
             span {
                 color: #FFF;
             }
+        }
+    }
+}
+
+.slick-arrow,
+.slick-arrow:hover
+.slick-arrow:focus,
+.slick-arrow.active {
+    width: 85px;
+    height: 65px;
+    z-index: 10!important;
+    background: #FFF!important;
+    font-size: 0;
+    top: 38%;
+    opacity: .8;
+    &:before {
+        display: none;
+    }
+}
+.slick-arrow:hover,
+.slick-arrow:focus,
+.slick-arrow.active  {
+    opacity: 1 !important;
+}
+
+.slick-prev {
+    left: 0;
+    &:after {
+        font-family: 'FontAwesome';
+        content: "\f104";
+        color: $black;
+        font-size: 36px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 22px;
+        bottom: 0;
+        margin: auto;
+        width: 15px;
+        height: 20px;
+    }
+}
+.slick-next {
+    right: 0;
+    &:after {
+        font-family: 'FontAwesome';
+        content: "\f105";
+        color: $black;
+        font-size: 36px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 22px;
+        bottom: 0;
+        margin: auto;
+        width: 15px;
+        height: 20px;
+    }
+}
+
+.about-person {
+    @include flex($alignI: stretch);
+    &__info {
+        background-color: #F3F3F3;
+        padding: 65px 90px;
+        width: 35%;
+        padding-bottom: 65px;
+        h1 {
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 60px;
+            span {
+                display: block;
+                font-weight: 100;
+                font-size: 30px;
+            }
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        &__contacts {
+            margin-bottom: 60px;
+            color: $black;
+            display: block;
+            a {
+                font-size: 20px;
+                font-weight: 100;
+                color: $black;
+                display: block;
+                span {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    &__img {
+        width: 65%;
+        background-position: 50% 50%;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+        &:after {
+            display: block;
+            content: "";
+            padding-top: 78%;
         }
     }
 }
