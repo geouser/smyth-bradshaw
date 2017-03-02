@@ -12,7 +12,12 @@
     &-title {
         height: 20%;
         background-color: $black;
-
+        &--light {
+            background-color: transparent !important;
+            h1, h2 {
+                color: $black !important;
+            }
+        }
         .wrapper-fluid {
             height: 100%;
 
