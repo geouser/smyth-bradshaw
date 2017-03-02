@@ -1,0 +1,87 @@
+.vacancy {
+    background-color: #FFF;
+    padding: 0;
+    @include flex($alignI: stetch);
+    font-size: 24px;
+    font-weight: 700;
+    color: $black;
+    @include transition(all, .2s);
+    &:hover {
+        background-color: $black;
+        color: #FFF;
+    }
+    > div {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+    > div:nth-of-type(1) {
+        width: 21%;
+        padding-left: 75px;
+    }
+    > div:nth-of-type(2) {
+        width: 21%;
+    }
+    > div:nth-of-type(3) {
+        width: 17%;
+    }
+    > div:nth-of-type(4) {
+        width: 17%;
+    }
+    > div:nth-of-type(5) {
+        width: 22%;
+    }
+    span {
+        display: none;
+    }
+    .vacancy-picture {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: $black;
+        padding-right: 75px;
+        text-align: right;
+        position: relative;
+        img {
+            display: block;
+            height: 100%;
+        }
+        i,
+        span {
+            color: #FFF;
+            position: absolute;
+            right: 0;
+            z-index: 2;
+            top: 10%;
+            display: block;
+        }
+        span {
+            font-weight: 700;
+            font-size: 24px;
+            text-transform: uppercase;
+            display: none;
+        }
+    }
+}
+
+.table-heading {
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 100;
+    @include flex($alignI: stetch);
+    > div:nth-of-type(1) {
+        width: 21%;
+        padding-left: 75px;
+    }
+    > div:nth-of-type(2) {
+        width: 21%;
+    }
+    > div:nth-of-type(3) {
+        width: 17%;
+    }
+    > div:nth-of-type(4) {
+        width: 17%;
+    }
+    > div:nth-of-type(5) {
+        width: 22%;
+        padding-right: 75px;
+    }
+}

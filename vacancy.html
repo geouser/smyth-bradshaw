@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><!--[if IE]>
+        <meta http-equiv="ImageResize" content="no">
+        <meta http-equiv="ImageToolbar" content="no">
+        <meta name="MSSmartTagsPreventParsing" content="true">
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><![endif]-->
+        <meta property="og:url" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="">
+        <meta name="google-site-verification" content="">
+        <!--<link rel="shortcut icon" href="images/favicon.ico">-->
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/jquery.fullpage.min.css">
+        <link rel="stylesheet" href="css/general.css">
+    </head>
+    <body class="bg">
+
+
+       
+        <!--=================================================================================================-->
+                                                    <!-- HEADER -->
+        <header class="site-header">
+
+            <div class="wrapper">
+                <div class="flex-row flex-row-middle">
+                    <a href="index.html" class="site-logo">
+                        <img class="light" src="images/site-logo-light.svg" alt="">
+                        <img class="dark" src="images/site-logo-dark.svg" alt="">
+                    </a>
+                    <form action="" class="search-form">
+                        <div class="form-group">
+                            <input class="search-form__input" type="text" name="s" placeholder="Search">
+                            <button class="search-form__button"><i class="fa fa-search" aria-hidden="true"></i></button>    
+                        </div>
+                    </form>
+                    <button class="site-menu-open"><i class="fa fa-bars" aria-hidden="true"></i></button>    
+                </div> <!-- end flex-row -->
+            </div> <!-- end wrapper -->
+
+        </header> <!-- end site-header -->
+
+        <menu class="site-menu">
+            <button class="site-menu-close">×</button>
+
+            <ul class="menu">
+                <li class="menu-item"><a href="#">About us</a></li>
+                <li class="menu-item"><a href="#">Our services</a></li>
+                <li class="menu-item"><a href="#">Consultants</a></li>
+                <li class="menu-item"><a href="#">Job board</a></li>
+                <li class="menu-item"><a href="#">Global networks</a></li>
+                <li class="menu-item"><a href="#">Blog</a></li>
+                <li class="menu-item"><a href="#">Join us</a></li>
+                <li class="menu-item"><a href="#">Contact</a></li>
+            </ul>
+
+            <a href="index.html" class="site-menu__logo"><img src="images/site-logo-extended.svg" alt=""></a>
+        </menu> <!-- end site-menu -->
+
+
+        <!--=================================================================================================-->
+                                                    <!-- OFFER SECTION -->
+        <div class="fp-section-title fp-section-title--light">
+            <div class="wrapper-fluid">
+                <h1>Vacancy</h1>
+            </div>
+        </div>
+
+        <div class="wrapper-fluid">
+            <div class="vacancies">
+                <div class="table-heading">
+                    <div>Position</div>
+                    <div>Industry</div>
+                    <div>Location</div>
+                    <div>The date of the position</div>
+                    <div>Agent picture</div>
+                </div>
+                <div class="vacancy">
+                    <div class="vacancy-position">
+                        <span>Position</span>
+                        Relationship Manager
+                    </div>
+                    <div class="vacancy-industry">
+                        <span>Industry</span>
+                        Multinational Bank
+                    </div>
+                    <div class="vacancy-location">
+                        <span>Location</span>
+                        Dubai, UAE
+                    </div>
+                    <div class="vacancy-date">
+                        <span>The date of the position</span>
+                        10.02.2017
+                    </div>
+                    <div class="vacancy-picture">
+                        <span>Agent picture</span>
+                        <img src="images/ava.jpg" alt="">
+                        <p>
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            <span>Apply</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fullpage-footer">
+            <div class="wrapper">
+                <div class="flex-row flex-row-middle">
+                    <div class="col-3 phone">
+                        <img src="images/phone.svg" alt="">
+                        <a href="tel:+971 4 818 3183">+971 4 818 3183</a>
+                    </div>
+                    <div class="col-4 email">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <a href="mailto:info@smythandbradshaw.com">info@smythandbradshaw.com</a>
+                    </div>
+                    <div class="col-2 follow">
+                        <span>Follow</span>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-3 request">
+                        <button class="send-request">Send request</button>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end fullpage-footer -->
+
+
+        <!-- //////////////////////////////////////////////////////////////////////// -->
+
+        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup"></div>
+
+        <div id="modal-popup-ok" class="mfp-hide zoom-anim-dialog popup result">
+            <p class="heading">Ваша заявка принята =)</p>
+            <p class="msg">Мы свяжемся с вами в ближайшее время!</p>
+        </div>
+
+        <div id="modal-popup-error" class="mfp-hide zoom-anim-dialog popup result">
+            <p class="heading">Упс, что-то пошло не так =)</p>
+            <p class="msg">Но вы всегда можете связаться с нами по телефону!</p>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+
+        <script src="js/jquery.fullpage.min.js"></script>
+        <script src="js/jquery.fullpage.extensions.min.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
