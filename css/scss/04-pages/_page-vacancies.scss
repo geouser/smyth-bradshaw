@@ -5,7 +5,8 @@
     font-size: 24px;
     font-weight: 700;
     color: $black;
-    @include transition(all, .2s);
+    margin-bottom: 20px;
+    @include transition(all, .4s);
     &:hover {
         background-color: $black;
         color: #FFF;
@@ -27,6 +28,7 @@
     > div:nth-of-type(4) {
         width: 17%;
     }
+    > a:nth-child(5),
     > div:nth-of-type(5) {
         width: 22%;
     }
@@ -40,24 +42,54 @@
         padding-right: 75px;
         text-align: right;
         position: relative;
+        display: block;
         img {
             display: block;
             height: 100%;
         }
-        i,
+        svg,
         span {
             color: #FFF;
             position: absolute;
             right: 0;
             z-index: 2;
-            top: 10%;
+            top: 50%;
+            right: 25%;
             display: block;
+            @include transition(all, .4s);
+            opacity: 1;
+            visibility: visible;
+            -webkit-transform: translateY(-50%);
+               -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                 -o-transform: translateY(-50%);
+                    transform: translateY(-50%);
         }
         span {
             font-weight: 700;
             font-size: 24px;
             text-transform: uppercase;
-            display: none;
+            visibility: hidden;
+            opacity: 0;
+        }
+        svg {
+            polyline {
+            fill: none;
+            stroke: #fff;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-miterlimit: 10;
+            }
+        }
+        &:hover {
+            svg {
+                opacity: 0;
+                visibility: hidden;
+            }
+            p span {
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
 }
