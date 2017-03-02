@@ -1,0 +1,67 @@
+.flex-reverse {
+    @include flex();
+    > div {
+        @include flex();
+    }
+    > div:nth-child(2n) {
+        -webkit-flex-direction: row-reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+    }
+}
+
+div.illustrated-info {
+    @include flex($alignI : stretch);
+    width: 100%;
+    &__text {
+        width: 34%;
+        background-color: $black;
+        color: #FFF;
+        p {
+            margin-bottom: 20px;
+            font-weight: 100;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 40px;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+        &:before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            margin-right: -2px;
+        }
+        > div {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 65px 90px;
+            max-width: 98%;
+        }
+    }
+    &__img {
+        width: 66%;
+        background-position: 50% 50%;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+        &:after {
+            content: "";
+            display: block;
+            padding-top: 45%;
+        }
+    }
+    &:nth-child(2n) {
+        .illustrated-info__text {
+            background-color: #FFF;
+            color: $black;
+        }
+    }
+}

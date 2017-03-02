@@ -1,7 +1,7 @@
 .site-header {
     background-color: #fff;
     height: 120px;
-    position: fixed;
+    position: relative;
     z-index: 1;
     left: 0;
     right: 0;
@@ -9,7 +9,9 @@
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-
+    &.fixed {
+        position: fixed;
+    }
     .wrapper {
         height: 100%;
     }
