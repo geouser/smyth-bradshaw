@@ -132,6 +132,28 @@ jQuery(document).ready(function($) {
         });
     });
 
+    /*---------------------------
+                                  Custom select
+    ---------------------------*/
+    $('select').each(function(index, el) {
+        $(this).wrap('<div class="custom-select"></div>');
+        $(this).attr('id', 'select' + index);
+        var wrapper = $(this).parent('.custom-select');
+        wrapper.prepend('<label class="select-text" for="select' + index + '"><label>');
+        var text_holder = $(this).siblings('.select-text');
+        wrapper.append('<i class="fa fa-caret-down" aria-hidden="true"></i>');
+
+        text_holder.text($(this).attr('data-placeholder'));
+
+        $(this).on('change', function(event) {
+            event.preventDefault();
+            text_holder.text($(this).find('option:selected').text());
+        });
+    });
+
+
+
+
 
     /*---------------------------
                                   Custom popup tabs
