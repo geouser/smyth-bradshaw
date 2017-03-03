@@ -17,6 +17,9 @@ div.illustrated-info {
         width: 34%;
         background-color: $black;
         color: #FFF;
+        @media (max-width: 1500px) {
+            width: 40%;
+        }
         p {
             margin-bottom: 20px;
             font-weight: 300;
@@ -26,11 +29,17 @@ div.illustrated-info {
             margin-bottom: 40px;
             font-weight: normal;
             text-transform: uppercase;
+            @media (max-width: 1500px) {
+              font-size: 40px;
+            }
         }
         h2 {
             font-weight: 700;
             font-size: 20px;
             margin-bottom: 25px;
+            @media (max-width: 1500px) {
+              font-size: 18px;
+            }
         }
         &:before {
             content: "";
@@ -44,6 +53,9 @@ div.illustrated-info {
             vertical-align: middle;
             padding: 65px 90px;
             max-width: 98%;
+            @media (max-width: 1700px) {
+                padding: 45px 60px;
+            }
         }
     }
     &__img {
@@ -52,6 +64,9 @@ div.illustrated-info {
         -webkit-background-size: cover;
              -o-background-size: cover;
                 background-size: cover;
+        @media (max-width: 1500px) {
+            width: 60%;
+        }
         &:after {
             content: "";
             display: block;
