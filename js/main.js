@@ -123,13 +123,21 @@ jQuery(document).ready(function($) {
         wrapper.append('<span class="file-button">+</span>');
         var file_button = $(this).siblings('.file-button');
 
+
+
         $(this).on('change', function(event) {
             event.preventDefault();
-            var filename = $(this).val().split('/').pop().split('\\').pop();
-            if ( filename == '' ) {
-                filename = 'Attach CV';
+        
+            if ( this.files[0].size < 5000000 ) {
+                var filename = $(this).val().split('/').pop().split('\\').pop();
+                if ( filename == '' ) {
+                    filename = 'Attach CV';
+                }
+                file_name.text(filename);
+            } else {
+                alert('Maximum file size is 5Mb');
             }
-            file_name.text(filename);
+            
         });
     });
 
