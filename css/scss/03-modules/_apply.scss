@@ -2,10 +2,19 @@
     padding: 80px 0;
     background-color: $black;
 
+    @media (max-width: 991px) {
+        padding: 50px 0;
+    }
+
     .fp-section-title {
         height: auto;
         width: 30%;
         float: left;
+
+        @media (max-width: 991px) {
+            width: 100%;
+            margin-bottom: 50px;
+        }
     }
 
     .wrapper-fluid:after {
@@ -15,6 +24,10 @@
     .apply-form {
         width: 70%;
         float: right;
+
+        @media (max-width: 991px) {
+            width: 100%;
+        }
     }
 }
 
@@ -25,6 +38,16 @@
 
         &:not(:last-child) {
             margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .col-6 {
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -60,7 +83,7 @@
         .select-text {
             width: 100%;
             height: 100%;
-            padding: 0 30px;
+            padding: 0 50px 0 30px;
             font-size: 18px;
             background-color: #E8E8E8;
             font-weight: normal;
@@ -69,6 +92,9 @@
             color: $black;
             position: relative;
             z-index: 1;
+             white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .fa {
@@ -111,12 +137,20 @@
         transition: background-color 0.3s ease;
         margin-right: 16px;
 
+        @media (max-width: 767px) {
+            margin-top: 0;
+            margin-bottom: 0;
+            width: 100%;
+            height: 50px;
+        }
+
         input {
             opacity: 0;
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
+            height: 100%;
             cursor: pointer;
             z-index: 3;
         }
@@ -138,6 +172,10 @@
             transition: color 0.3s ease;
             z-index: 1;
             position: relative;
+
+            @media (max-width: 767px) {
+                line-height: 46px;
+            }
         }
 
         .file-button {
@@ -156,6 +194,10 @@
             -o-transition: color 0.3s ease;
             transition: color 0.3s ease;
             z-index: 2;
+
+            @media (max-width: 767px) {
+                line-height: 46px;
+            }
         }
 
         &:hover {
@@ -176,6 +218,13 @@
             display: inline-block;
             color: #fff;
             vertical-align: top;
+
+            @media (max-width: 767px) {
+                margin-top: 0;
+                display: block;
+                font-size: 16px;
+                line-height: normal;
+            }
         }
     }
 
