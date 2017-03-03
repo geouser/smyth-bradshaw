@@ -166,6 +166,18 @@
         padding: 65px 90px;
         width: 35%;
         padding-bottom: 65px;
+        @media (max-width: 1700px) {
+            padding: 45px 60px;
+        }
+        @media (max-width: 1500px) {
+            width: 40%;
+        }
+        @media (max-width: 1200px) {
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            padding: 25px 20px;
+        }
         h1 {
             font-size: 48px;
             font-weight: 400;
@@ -174,6 +186,22 @@
                 display: block;
                 font-weight: 300;
                 font-size: 30px;
+                @media (max-width: 1500px) {
+                  font-size: 26px;
+                }
+                @media (max-width: 800px) {
+                    font-size: 22px;
+                }
+            }
+            @media (max-width: 1500px) {
+              font-size: 40px;
+            }
+            @media (max-width: 800px) {
+                margin-bottom: 40px;
+                font-size: 32px;
+            }
+            @media (max-width: 600px) {
+                margin-bottom: 20px;
             }
         }
         p {
@@ -193,10 +221,22 @@
                     font-weight: 400;
                 }
             }
+            @media (max-width: 800px) {
+                margin-bottom: 40px;
+            }
+            @media (max-width: 600px) {
+                margin-bottom: 20px;
+            }
         }
     }
     &__img {
         width: 65%;
+        @media (max-width: 1500px) {
+            width: 60%;
+        }
+        @media (max-width: 1200px) {
+            width: 100%;
+        }
         background-position: 50% 50%;
         -webkit-background-size: cover;
              -o-background-size: cover;
