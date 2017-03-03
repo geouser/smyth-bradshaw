@@ -1,0 +1,59 @@
+.article {
+    @include flex($alignI: flex-start);
+    padding: 60px 0;
+    aside {
+        width: 370px;
+        .aside__heading {
+            display: block;
+            font-weight: 300;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+        img {
+            width: 100%;
+            display: block;
+            margin-bottom: 40px;
+        }
+        .aside__authorInfo {
+            font-size: 16px;
+            font-weight: 300;
+            span {
+                display: block;
+            }
+        }
+    }
+    article {
+        width: -webkit-calc(100% - 370px);
+        width: calc(100% - 370px);
+        padding-right: 80px;
+        font-weight: 300;
+        h1 {
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        time {
+            display: block;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 55px;
+        }
+        strong {
+            font-weight: 400;
+            display: block;
+            margin-bottom: 28px;
+        }
+        p {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.share {
+    margin-top: 60px;
+    .socials {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+    }
+}
