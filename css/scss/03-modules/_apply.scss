@@ -1,0 +1,203 @@
+.apply {
+    padding: 80px 0;
+    background-color: $black;
+
+    .fp-section-title {
+        height: auto;
+        width: 30%;
+        float: left;
+    }
+
+    .wrapper-fluid:after {
+        @extend %clearfix;
+    }
+
+    .apply-form {
+        width: 70%;
+        float: right;
+    }
+}
+
+
+.apply-form {
+    .form-group {
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    input[type=text],
+    input[type=tel],
+    input[type=email],
+    textarea {
+        width: 100%;
+        height: 50px;
+        border: 0;
+        background-color: #E8E8E8;
+        padding: 0 30px;
+        font-size: 18px;
+        color: #757575;
+        font-weight: normal;
+        display: block;
+        width: 100%;
+    }
+
+    textarea {
+        height: 120px;
+        resize: none;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+
+    .custom-select {
+        width: 100%;
+        height: 50px;
+        position: relative;
+
+        .select-text {
+            width: 100%;
+            height: 100%;
+            padding: 0 30px;
+            font-size: 18px;
+            background-color: #E8E8E8;
+            font-weight: normal;
+            display: block;
+            line-height: 50px;
+            color: $black;
+            position: relative;
+            z-index: 1;
+        }
+
+        .fa {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            z-index: 3;
+        }
+
+        select {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+            z-index: 2;
+            opacity: 0;
+        }
+    }
+
+    .custom-file {
+        margin: 40px 0 20px;
+        width: 180px;
+        height: 35px;
+        border: 2px solid #fff;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        -webkit-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease;
+        margin-right: 16px;
+
+        input {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .file-name {
+            width: 100%;
+            height: 100%;
+            display: block;
+            line-height: 31px;
+            color: #e8e8e8;
+            font-size: 18px;
+            font-weight: normal;
+            padding: 0 50px 0 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-transition: color 0.3s ease;
+            -o-transition: color 0.3s ease;
+            transition: color 0.3s ease;
+            z-index: 1;
+            position: relative;
+        }
+
+        .file-button {
+            width: 50px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            line-height: 31px;
+            font-family: Arial;
+            font-size: 28px;
+            color: #fff;
+            display: block;
+            text-align: center;
+            -webkit-transition: color 0.3s ease;
+            -o-transition: color 0.3s ease;
+            transition: color 0.3s ease;
+            z-index: 2;
+        }
+
+        &:hover {
+            background-color: #fff;
+
+            .file-name,
+            .file-button {
+                color: $black;
+            }
+        }
+
+        & + label {
+            font-size: 18px;
+            line-height: 35px;
+            margin: 40px 0 20px;
+            text-align: left;
+            font-weight: normal;
+            display: inline-block;
+            color: #fff;
+            vertical-align: top;
+        }
+    }
+
+    .submit {
+        display: block;
+        width: 250px;
+        height: 45px;
+        background-color: #fff;
+        color: $black;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: normal;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        border: 1px solid #fff;
+        cursor: pointer;
+
+        &:hover {
+            background-color: transparent;
+            color: #fff;
+        }
+    }
+}
