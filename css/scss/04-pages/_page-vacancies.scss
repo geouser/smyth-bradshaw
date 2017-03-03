@@ -16,6 +16,9 @@
         display: block;
         padding: 20px;
     }
+    @media (max-width: 600px) {
+      font-size: 18px;
+    }
     @include transition(all, .4s);
     &:hover {
         background-color: $black;
@@ -110,6 +113,9 @@
             @media (max-width: 1500px) {
                 right: 15%;
             }
+            @media (max-width: 600px) {
+                right: 12%;
+            }
         }
         span {
             font-weight: 700;
@@ -159,6 +165,18 @@
     padding-top: 70px;
     padding-bottom: 70px;
     background-color: #FFF;
+    @media (max-width: 1700px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @media (max-width: 1500px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    @media (max-width: 1200px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
     .vacancy {
         padding-top: 30px;
         position: relative;
@@ -182,6 +200,9 @@
         > div {
             padding-top: 0px;
             padding-bottom: 0px;
+            @media (max-width: 1200px) {
+                padding: 10px 0;
+            }
         }
         &:hover {
             background-color: #fff;
@@ -189,15 +210,23 @@
         }
         .vacancy-picture {
             padding: 0;
+            background: transparent;
             img {
                 max-width: 100%;
                 height: auto;
+            }
+            @media (max-width: 1200px) {
+                margin-top: 20px;
             }
         }
         .socials {
             position: absolute;
             left: 0;
             top: 155px;
+            @media (max-width: 1200px) {
+                position: static;
+                margin-top: 20px;
+            }
         }
     }
     .table-heading {
@@ -279,6 +308,24 @@
             display: block;
             font-size: 24px;
             font-weight: 300;
+            @media (max-width: 1500px) {
+              font-size: 22px;
+            }
+            @media (max-width: 800px) {
+                font-size: 20px;
+            }
+            @media (max-width: 600px) {
+                font-size: 18px;
+            }
+        }
+        @media (max-width: 1500px) {
+          font-size: 32px;
+        }
+        @media (max-width: 800px) {
+            font-size: 28px;
+        }
+        @media (max-width: 600px) {
+            margin-bottom: 22px;
         }
     }
     h3 {
@@ -286,6 +333,14 @@
         margin-top: 60px;
         font-size: 16px;
         margin-bottom: 20px;
+        @media (max-width: 1500px) {
+          margin-top: 40px;
+        }
+        @media (max-width: 800px) {
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+        }
     }
     p, li {
         font-size: 16px;
