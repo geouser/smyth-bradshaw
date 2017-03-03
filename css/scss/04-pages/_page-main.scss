@@ -13,7 +13,7 @@
         height: 20%;
         background-color: $black;
         &--light {
-            background-color: transparent !important;
+           background: #f3f3f3 !important;
             h1, h2 {
                 color: $black !important;
             }
