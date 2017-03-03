@@ -106,7 +106,8 @@ jQuery(document).ready(function($) {
             verticalCentered: false,
             lockAnchors: false,
             anchors:['main-screen', 'industries', 'job-offers', 'blog', 'navigation'],
-            normalScrollElements: '.site-menu'
+            normalScrollElements: '.site-menu',
+            responsiveWidth: 1201
         })
     }
 
