@@ -180,7 +180,15 @@ jQuery(document).ready(function($) {
     $('.team--slider').slick({
         slidesToShow: 2,
         arrows: true,
-        dots: false
+        dots: false,
+        responsive: [
+            {
+              breakpoint: 700,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+        ]
     });
     /*----------------------------
                               SEND FORM

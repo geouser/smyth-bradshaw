@@ -6,9 +6,15 @@
     width: 50%;
     color: $black;
     @include transition(all, .4s);
+    @media (max-width: 700px) {
+        width: 100%;
+    }
     &__img {
         background-repeat: no-repeat;
         background-position: 50% 50%;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
         position: relative;
         &:after {
             content: "";
@@ -33,21 +39,37 @@
         background-color: #FFF;
         padding: 25px 25px 25px 80px;
         @include transition(all, .4s);
+        font-size: 30px;
+        @media (max-width: 1700px) {
+            font-size: 28px;
+        }
+        @media (max-width: 1500px) {
+            font-size: 26px;
+            padding: 20px 25px 20px 60px;
+        }
+        @media (max-width: 1300px) {
+            font-size: 22px;
+            padding: 15px 15px 15px 40px;
+        }
+        @media (max-width: 1000px) {
+            font-size: 18px;
+            padding: 10px 10px 10px 20px;
+        }
+        @media (max-width: 400px) {
+            font-size: 16px;
+        }
         strong {
             display: block;
-            font-size: 30px;
             font-weight: 400;
             @include transition(all, .4s);
         }
         span {
             display: block;
-            font-size: 30px;
             font-weight: 300;
             @include transition(all, .4s);
         }
     }
     &:hover {
-        color: #fff;
         .worker__img:before {
             opacity: 1;
         }
@@ -75,6 +97,14 @@
     &:before {
         display: none;
     }
+    @media (max-width: 1000px) {
+        width: 68px;
+        height: 52px;
+    }
+    @media (max-width: 800px) {
+        width: 54px;
+        height: 40px;
+    }
 }
 .slick-arrow:hover,
 .slick-arrow:focus,
@@ -97,6 +127,12 @@
         margin: auto;
         width: 15px;
         height: 20px;
+        @media (max-width: 1000px) {
+            font-style: 28px;
+        }
+        @media (max-width: 800px) {
+            font-size: 22px;
+        }
     }
 }
 .slick-next {
@@ -114,6 +150,12 @@
         margin: auto;
         width: 15px;
         height: 20px;
+        @media (max-width: 1000px) {
+            font-style: 28px;
+        }
+        @media (max-width: 800px) {
+            font-size: 22px;
+        }
     }
 }
 
