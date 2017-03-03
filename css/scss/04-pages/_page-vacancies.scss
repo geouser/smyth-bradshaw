@@ -94,10 +94,79 @@
     }
 }
 
+.vacancies-single {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #FFF;
+    .vacancy {
+        padding-top: 30px;
+        > div:nth-of-type(1) {
+            width: 18%;
+            padding-left: 0px;
+        }
+        > div:nth-of-type(2) {
+            width: 18%;
+        }
+        > div:nth-of-type(3) {
+            width: 17%;
+        }
+        > div:nth-of-type(4) {
+            width: 17%;
+        }
+        > a:nth-child(5),
+        > div:nth-of-type(5) {
+            width: 28%;
+        }
+        > div {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+        &:hover {
+            background-color: #fff;
+            color: $black;
+        }
+        .vacancy-picture {
+            padding: 0;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .table-heading {
+        > div:nth-of-type(1) {
+            width: 18%;
+            padding-left: 0px;
+        }
+        > div:nth-of-type(2) {
+            width: 18%;
+        }
+        > div:nth-of-type(3) {
+            width: 17%;
+        }
+        > div:nth-of-type(4) {
+            width: 17%;
+        }
+        > a:nth-child(5),
+        > div:nth-of-type(5) {
+            width: 28%;
+            padding-right: 0;
+            p {
+                float: right;
+                text-align: right;
+                font-weight: 400;
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
 .table-heading {
     padding: 12px 0;
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 300;
     @include flex($alignI: stetch);
     > div:nth-of-type(1) {
         width: 21%;
@@ -122,23 +191,23 @@
     padding-bottom: 65px;
     background: #f3f3f3;
     h1 {
-        font-weight: 100;
+        font-weight: 300;
         font-size: 40px;
         span {
             display: block;
             font-size: 24px;
-            font-weight: 100;
+            font-weight: 300;
         }
     }
     h3 {
-        font-weight: 100;  
+        font-weight: 300;  
         margin-top: 60px;
         font-size: 16px;
         margin-bottom: 20px;
     }
     p, li {
         font-size: 16px;
-        font-weight: 100;
+        font-weight: 300;
     }
     ul {
         list-style-type: none;
