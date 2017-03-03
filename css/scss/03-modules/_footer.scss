@@ -3,6 +3,10 @@
     color: #fff;
     padding: 80px 0;
 
+    @media (max-width: 991px) {
+        padding: 50px 0;
+    }
+
     .site-logo {
         width: 350px;
         max-width: 100%;
@@ -11,12 +15,50 @@
         .light {
             display: block;
         }
+
+        @media (max-width: 1200px) {
+            width: 250px;
+        }
+
+        @media (max-width: 991px) {
+            width: 280px;
+        }
+
+        @media (max-width: 550px) {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .flex-row {
+        @media (max-width: 991px) {
+            .col-4,
+            .col-3,
+            .col-2 {
+                width: 50%;
+                margin-bottom: 50px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .col-4,
+            .col-3,
+            .col-2 {
+                width: 100%;
+                margin-bottom: 50px;
+            }
+        }
     }
 
     .studio {
         color: $white;
         font-size: 20px;
         font-weight: 300;
+
+        @media (max-width: 991px) {
+            text-align: center;
+        }
 
         a {
             color: inherit;
@@ -35,6 +77,15 @@
         text-align: left;
         font-weight: normal;
         margin-bottom: 20px;
+
+        @media (max-width: 1200px) {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 550px) {
+            text-align: center;
+        }
     }
 
     .menu-item {
@@ -45,6 +96,18 @@
 
         @media (max-width: 1600px) {
             font-size: 16px;
+        }
+
+        @media (max-width: 1200px) {
+            font-size: 14px;
+
+            &:not(:last-child) {
+                margin-bottom: 7px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            text-align: center;
         }
 
         a {
@@ -77,6 +140,17 @@
         margin-top: 50px;
         max-width: 100%;
 
+        @media (max-width: 1200px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 550px) {
+            width: 280px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
         &:hover {
             background-color: #fff;
         }
@@ -87,6 +161,13 @@
 .subscribe-form {
     width: 285px;
     max-width: 100%;
+
+    @media (max-width: 550px) {
+        width: 280px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
     
     input {
         width: 100%;

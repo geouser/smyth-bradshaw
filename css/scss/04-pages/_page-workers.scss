@@ -40,6 +40,8 @@
         padding: 25px 25px 25px 80px;
         @include transition(all, .4s);
         font-size: 30px;
+
+
         @media (max-width: 1700px) {
             font-size: 28px;
         }
@@ -166,14 +168,21 @@
         padding: 65px 90px;
         width: 35%;
         padding-bottom: 65px;
-        @media (max-width: 1700px) {
+
+
+        @media (max-width: 1600px) {
             padding: 45px 60px;
+            width: 40%;
+            padding-left: -webkit-calc(50% - 590px);
+            padding-left: calc(50% - 590px);
         }
         @media (max-width: 1500px) {
             width: 40%;
         }
         @media (max-width: 1200px) {
             width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
         }
         @media (max-width: 600px) {
             padding: 25px 20px;
@@ -231,7 +240,7 @@
     }
     &__img {
         width: 65%;
-        @media (max-width: 1500px) {
+        @media (max-width: 1600px) {
             width: 60%;
         }
         @media (max-width: 1200px) {
