@@ -31,6 +31,9 @@ div.illustrated-info {
         p {
             margin-bottom: 20px;
             font-weight: 300;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
         h1 {
             font-size: 48px;
