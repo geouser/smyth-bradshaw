@@ -12,12 +12,24 @@
     &-title {
         height: 20%;
         background-color: $black;
+
+        h2,
+        h1 {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 48px;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: normal;
+        }
+
         &--light {
-           background: #f3f3f3 !important;
+            background-color: #f3f3f3;
             h1, h2 {
-                color: $black !important;
+                color: $black;
             }
         }
+
         .wrapper-fluid {
             height: 100%;
             position: relative;
@@ -31,17 +43,8 @@
                 vertical-align: middle;
                 height: 100%;
             }
-
-            h2,
-            h1 {
-                display: inline-block;
-                vertical-align: middle;
-                font-size: 48px;
-                text-transform: uppercase;
-                color: #fff;
-                font-weight: normal;
-            }
         }
+        
     }
 }
 
